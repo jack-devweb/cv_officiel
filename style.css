@@ -12,13 +12,30 @@
   width: 40px;
 }
 
+
 /* H1/2/3... */
 h1 {
   text-align: center;
   /* Add text color */
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   /* Add padding and border radius for formatting */
   padding: 20px;
+  color: aliceblue !important;
+}
+@media (min-width: 780px) {
+  h1{
+    color: #fff !important;
+    text-shadow: 0 0 2px black;
+  }
+}
+.dev_web{
+  text-align: center;
+  color: aliceblue;
+}
+@media (max-width: 780px) {
+  .dev_web{
+    font-size: 2em !important;
+  }
 }
 
 /*SECTIONS*/
@@ -216,7 +233,9 @@ p {
   justify-content: space-around;
 
 }
-
+.formation{
+  padding-bottom: 10px;
+}
 section {
   display: flex;
   flex-wrap: nowrap;
@@ -270,6 +289,21 @@ section {
   text-align: center;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 768px){
+  .exp-container{
+    grid-template-columns: none;
+    padding: 0;
+  }
+  .exp2{
+    grid-template-columns: none;
+  }
+  .exp-pro{
+    padding-left: inherit !important;
+  }
+}
+  
+
 
 .exp-pro {
   background-image: url(images/resume-moderne-futuriste-fond-gris-clair-illustration-de-stock-2jkrn7j.jpg);
@@ -377,6 +411,8 @@ a:hover {
 /* BODY */
 body {
   background: linear-gradient(to bottom, #a8c2e5, #d5d5d5);
+  overflow-x: hidden;
+
 }
 
 /* IMAGES */
@@ -430,8 +466,14 @@ a {
   .contact-content {
     flex-direction: column;
   }
-
+  
+  
+  
 }
+
+
+  
+
 
 .prez2 img {
   border-radius: 8px;
@@ -453,6 +495,11 @@ a {
   border-radius: 5px;
   font-size: medium;
 }
+  @media (max-width:780px){
+    .prez{
+      padding: 7px
+    }
+  }
 
 .bg-light {
   --bs-bg-opacity: 1;
@@ -469,6 +516,15 @@ a {
   color: white;
   perspective: 1000px;
   transform-origin: center;
+}
+
+@media (max-width:780px) {
+  iframe {
+    width: 100%;
+    height: 100%;
+    
+  }
+  
 }
 
 .icon-cards__content {
@@ -643,7 +699,7 @@ h2 {
 }
 
 .slider {
-  max-width: 50%;
+  /* max-width: 50%; */
   height: 30%;
 }
 
@@ -667,6 +723,8 @@ h2 {
   text-align: left;
   height: 15%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .modal {
@@ -696,6 +754,10 @@ h2 {
 
   .slider figure img {
     width: 100%;
+  }
+
+  .slider figure{
+    flex-wrap: wrap;
   }
 }
 
@@ -853,3 +915,20 @@ p a:hover {
   z-index: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(images/fond\ montagne.jpg.crdownload);
 }
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  background-image: url(images/st-in.jpg);
+  background-size: cover;
+}
+.contact-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side,
+.right-side {
+  width: 50%;
+}
+
